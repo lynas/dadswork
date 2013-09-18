@@ -1,0 +1,146 @@
+/* 
+    Document   : style
+    Created on : Sep 18, 2013, 1:09:59 AM
+    Author     : LynAs
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+
+body{
+    background-color: graytext;
+    background-position:center 0;
+
+    font-family:solaimanLipi,arial
+}
+
+.inputform{
+    padding:20px;
+    background: #fff;
+    -webkit-border-radius:6px 6px 6px 6px;
+    -moz-border-radius:6px 6px 6px 6px;
+    border-radius:6px 6px 6px 6px;
+    width: 500px;
+    margin: 0 auto; 
+}
+
+
+.rootContainer{
+    margin: 0 auto; 
+    width: 1000px;
+    padding:20px;
+    background: #eee;
+
+
+}
+
+.jabedamain{
+    padding:20px;
+    background: #ddd;
+    -webkit-border-radius:6px 6px 6px 6px;
+    -moz-border-radius:6px 6px 6px 6px;
+    border-radius:6px 6px 6px 6px;
+    width: 950px;
+    margin: 0 auto; 
+}
+
+.jabedamainheader{
+
+    background:none repeat scroll 0 0 #ECECEC;
+    margin-bottom: 18px;line-height:60px;
+    border: 1px solid #ECECEC;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px
+
+}
+
+.jabedamainheader{
+    text-align: center;
+}
+
+
+.joma{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 100%;
+}
+
+.joma th {
+    font-size: 1.4em;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #A7C942;
+    color: #fff;
+}
+
+
+
+
+.joma td, #customers th {
+    font-size: 1.2em;
+    border: 1px solid #98bf21;
+    padding: 2px 2px 2px 2px;
+    max-width:100px;
+}
+
+.khoroch{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 100%;
+
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+
+
+
+.khoroch th {
+    font-size: 1.4em;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #A7C942;
+    color: #fff;
+}
+
+.khoroch td, .khoroch th {
+    font-size: 1.2em;
+    border: 1px solid #98bf21;
+    padding: 3px 7px 2px 7px;
+}
+
+
+
+
+
+#header {
+    width: 100%;
+    background-color: red;
+    height: 30px;
+}
+
+#container {
+    
+    background-color: #ffcc33;
+    margin: auto;
+}
+#first {
+    width: 50%;
+    float: left;
+    
+    background-color: #fff;
+}
+#second {
+    width: 50%;
+    float: left;
+    
+    background-color: #aaa;
+}
