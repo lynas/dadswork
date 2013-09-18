@@ -144,3 +144,11 @@ body{
     
     background-color: #aaa;
 }
+#footer {
+    width: 100%;
+    background-color: #5f9fc6;
+    
+}
+#footer td{
+    padding: 20px;
+}
