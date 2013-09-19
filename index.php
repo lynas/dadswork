@@ -10,6 +10,7 @@
             <div class ="inputform">
                 <table>
                     <tr><td>Voucher no:</td><td><input type="text" class="vn" value="" /></td></tr>
+                    <tr><td></td><td><select class="previousBiboron" style="width: 155px;"></select></td></tr>
                     <tr><td>Biboron:</td><td><input type="text" class="bib" value="" /></td></tr>
                     <tr><td>Joma/Khoroch:</td>
                         <td>
@@ -70,10 +71,10 @@
                 </div>
                 <div id="footer">
                     <table>
-                        <tr><td>Total JOMA</td><td class="totaljoma"></td></tr>
+                        <tr><td>Total Joma</td><td class="totaljoma"></td></tr>
                         <tr><td>Total KHOROCH</td><td class="totalkhoroch"></td></tr>
                         <tr><td>REMAINING</td><td class="remaining"></td></tr>
-                        <tr><td></td><td><input type="button" class="addall" value="add all" /> </td></tr>
+                        <tr><td></td><td><input type="button" class="addall" value="Show All" /> </td></tr>
                     </table>
                 </div>
             </div>

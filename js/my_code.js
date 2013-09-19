@@ -13,19 +13,15 @@ $('.save').click(function() {
         data: {varname: "value"},
         success: function(response) {
             alert(response);
+            location.reload();
         }
     });
-
-
-
 });
 
 function showTodaysTransaction() {
     showDebit();
     showCredit();
-
-
-
+    showPrevBib();
 
 }
 function showDebit() {
@@ -33,8 +29,6 @@ function showDebit() {
         url: 'php/dbgeneralget.php',
         data: {type: "credit"},
         success: function(response) {
-
-            //$(".start").html(response);
             $('.khoroch tr:last').after(response);
         }
     });
@@ -44,18 +38,27 @@ function showCredit() {
         url: 'php/dbgeneralget.php',
         data: {type: "debit"},
         success: function(response) {
-
-            //$(".start").html(response);
             $('.joma tr:last').after(response);
         }
     });
 }
-
+function showPrevBib() {
+   // $('.previousBiboron').append($('<option>', {value: 1, text: 'My option'}), $('<option>', {value: 2, text: 'My option2'}));
+   $.ajax({
+        url: 'php/populatenames.php',
+        data: {nan: ""},
+        success: function(response) {
+            $('.previousBiboron').append(response);
+           
+           //alert(response);
+        }
+    });
+    
+   //alert("working");
+}
 
 
 $('.addall').click(function() {
-    
-
     var tds = document.getElementById('khoroch').getElementsByTagName('td');
     var sum = 0;
     for (var i = 0; i < tds.length; i++) {
@@ -63,12 +66,7 @@ $('.addall').click(function() {
             sum += isNaN(tds[i].innerHTML) ? 0 : parseFloat(tds[i].innerHTML);
         }
     }
-    
-    //alert(sum);
-    
     $('.totalkhoroch').html(sum);
-    
-    
     var tds = document.getElementById('joma').getElementsByTagName('td');
     var sum2 = 0;
     for (var i = 0; i < tds.length; i++) {
@@ -76,11 +74,61 @@ $('.addall').click(function() {
             sum2 += isNaN(tds[i].innerHTML) ? 0 : parseFloat(tds[i].innerHTML);
         }
     }
-    
     $('.totaljoma').html(sum2);
-    
     var x = parseFloat($(".totaljoma").html());
     var y = parseFloat($(".totalkhoroch").html());
-    $('.remaining').html(x-y);
+    $('.remaining').html(x - y);
+});
+
+
+
+$(document).on('click', '.rid', function() {
+        $.ajax({
+        url: 'php/deleterow.php',
+        data: {deleterownum: $(this).html()},
+        success: function(response) {
+           alert(response);
+           location.reload();
+        }
+    });
+});
+
+
+$(document).on('click', '.desc', function() {
+    //alert($(this).html());
+    
 
 });
+
+
+
+$(document).on('change', '.previousBiboron', function() {
+  alert( this.value ); // or $(this).val()
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
