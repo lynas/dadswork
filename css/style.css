@@ -64,14 +64,14 @@ body{
 }
 
 
-.joma{
+.joma, .totalbalance{
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     width: 100%;
     border-collapse: collapse;
     font-size: 100%;
 }
 
-.joma th {
+.joma th, .totalbalance th {
     font-size: 1.4em;
     text-align: center;
     padding-top: 5px;
@@ -83,7 +83,7 @@ body{
 
 
 
-.joma td, #customers th {
+.joma td, #customers th, .totalbalance th {
     font-size: 1.2em;
     border: 1px solid #98bf21;
     padding: 2px 2px 2px 2px;
@@ -124,7 +124,7 @@ body{
 #header {
     width: 100%;
     background-color: red;
-    height: 30px;
+    height: 50px;
 }
 
 #container {
@@ -151,4 +151,13 @@ body{
 }
 #footer td{
     padding: 20px;
+}
+
+#selectedUser{
+    font-size: 1.4em;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    
+    color: red;
 }

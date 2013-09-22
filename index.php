@@ -2,17 +2,19 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title></title>
+        <title>Ledger Book</title>
         <link rel="stylesheet" href="css/style.css" type="text/css">
     </head>
     <body onload="showTodaysTransaction()">
         <div class="rootContainer">
+            <a href="totalbalancesheet.php"><img src="res/balancesheet.JPG" /></a><br />
+            <a href="individual.php"><img src="res/khotian.JPG" /></a><br />
             <div class ="inputform">
                 <table>
-                    <tr><td>Voucher no:</td><td><input type="text" class="vn" value="" /></td></tr>
+                    <tr><td><img src="res/vaucharno.JPG" /></td><td><input type="text" class="vn" value="" /></td></tr>
                     <tr><td></td><td><select class="previousBiboron" style="width: 155px;"></select></td></tr>
-                    <tr><td>Biboron:</td><td><input type="text" class="bib" value="" /></td></tr>
-                    <tr><td>Joma/Khoroch:</td>
+                    <tr><td><img src="res/biboron.JPG" /></td><td><input type="text" class="bib" value="" /></td></tr>
+                    <tr><td><img src="res/jomaorkhoroch.JPG" /></td>
                         <td>
                             <select class="jomaOrKhoroch" style="width: 155px;">
                                 <option value="Select">Select</option>
@@ -20,8 +22,8 @@
                                 <option value="Khoroch">Khoroch</option>
                             </select>
                         </td></tr>
-                    <tr><td>Taka:</td><td><input type="text" class="taka" value="" /></td></tr>
-                    <tr><td>Tarik:</td><td><input type="text" class="tarik" value="<?php echo date("Y-m-d"); ?>" /></td></tr>
+                    <tr><td><img src="res/taka.JPG" /></td><td><input type="text" class="taka" value="" /></td></tr>
+                    <tr><td><img src="res/tarikh.JPG" /></td><td><input type="text" class="tarik" value="<?php echo date("Y-m-d"); ?>" /></td></tr>
                     <tr><td></td><td><input type="button" class="save" id="save" value="Save"/></td></tr>
                     
                 </table>
@@ -33,12 +35,13 @@
             <div class ="jabedamain">
                 <div class="jabedamainheader ">
                     <div class="">
-                        Jabeda Khata <br />
-                        <?php echo date("Y-m-d"); ?>
-                        <input type="button" class="addanewrow" id="addanewrow" value="Add Row"   />
+                        <img src="res/jabedakhata.JPG" />
+                        <br />
+                        <img src="res/tarikh.JPG" /> <?php echo date("Y-m-d"); ?>
+                        
                     </div>
 
-                    <div id="header"></div>
+                    <div id="header"><span><img src="res/joma.JPG"></span><span style="padding-left: 350px;"><img src="res/khoroch.JPG"></span></div>
                     <div id="container">
                         <div id="first">
                             <table class="joma" id="joma">
@@ -57,7 +60,7 @@
                                 <tbody>
                                     <tr>
                                         <th>Id</th>
-                                        <th>Voucher No</th>
+                                        <th>V No</th>
                                         <th>Biboron</th>
                                         <th>Taka</th>
                                     </tr>
@@ -71,23 +74,15 @@
                 </div>
                 <div id="footer">
                     <table>
-                        <tr><td>Total Joma</td><td class="totaljoma"></td></tr>
-                        <tr><td>Total KHOROCH</td><td class="totalkhoroch"></td></tr>
-                        <tr><td>REMAINING</td><td class="remaining"></td></tr>
+                        <tr><td><img src="res/motjoma.JPG" /></td><td class="totaljoma"></td></tr>
+                        <tr><td><img src="res/motkhoroch.JPG" /></td><td class="totalkhoroch"></td></tr>
+                        <tr><td><img src="res/obosisto.JPG" /></td><td class="remaining"></td></tr>
                         <tr><td></td><td><input type="button" class="addall" value="Show All" /> </td></tr>
                     </table>
                 </div>
             </div>
 
-            <div class="testsection">
-                <input type="button" class="addrow" id="save" value="Add row"   />
-                <table id="myTable">
-                    <tbody>
-                        <tr><td>1</td><td>2</td></tr>
-                    </tbody>
-                </table>
-
-            </div>
+            
 
             <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
             <script type="text/javascript" src="js/my_code.js"></script>

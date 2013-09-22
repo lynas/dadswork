@@ -43,18 +43,18 @@ function showCredit() {
     });
 }
 function showPrevBib() {
-   // $('.previousBiboron').append($('<option>', {value: 1, text: 'My option'}), $('<option>', {value: 2, text: 'My option2'}));
-   $.ajax({
+    // $('.previousBiboron').append($('<option>', {value: 1, text: 'My option'}), $('<option>', {value: 2, text: 'My option2'}));
+    $.ajax({
         url: 'php/populatenames.php',
         data: {nan: ""},
         success: function(response) {
             $('.previousBiboron').append(response);
-           
-           //alert(response);
+
+            //alert(response);
         }
     });
-    
-   //alert("working");
+
+    //alert("working");
 }
 
 
@@ -83,35 +83,100 @@ $('.addall').click(function() {
 
 
 $(document).on('click', '.rid', function() {
+    var r = confirm("Do You Really want to delete??");
+    if (r === true)
+    {
         $.ajax({
         url: 'php/deleterow.php',
         data: {deleterownum: $(this).html()},
         success: function(response) {
-           alert(response);
-           location.reload();
+            alert(response);
+            location.reload();
         }
     });
+    }
+    else
+    {
+        location.reload();
+    }
+    
 });
 
 
 $(document).on('click', '.desc', function() {
-    //alert($(this).html());
-    
+    alert($(this).html());
+
 
 });
 
 
 
 $(document).on('change', '.previousBiboron', function() {
-  alert( this.value ); // or $(this).val()
+
+    $('.bib').val(this.value);
 });
 
+function showTotalBalanceSheet() {
+    $.ajax({
+        url: 'php/getcompletebalancesheet.php',
+        data: {type: "null"},
+        success: function(response) {
+            $('.totalbalance tr:last').after(response);
+        }
+    });
+}
+function showPrevBiboron() {
+    // $('.previousBiboron').append($('<option>', {value: 1, text: 'My option'}), $('<option>', {value: 2, text: 'My option2'}));
+    $.ajax({
+        url: 'php/populatenames.php',
+        data: {nan: ""},
+        success: function(response) {
+            $('.indiusers').append(response);
+
+            //alert(response);
+        }
+    });
+
+    //alert("working");
+}
+$(document).on('change', '.indiusers', function() {
+    
+    
+    
+    $('#selectedUser').html(this.value);
+    indishowDebit(this.value);
+    indishowCredit(this.value);
+});
+
+function indishowDebit(user) {
+    
+
+    $.ajax({
+        url: 'php/getindiall.php',
+        data: {type: "credit", user: user},
+        success: function(response) {
+            
+            $('.khoroch tr:last').after(response);
+        }
+    });
+}
+function indishowCredit(user) {
+    $.ajax({
+        url: 'php/getindiall.php',
+        data: {type: "debit", user: user},
+        success: function(response) {
+            
+            $('.joma tr:last').after(response);
+        }
+    });
+}
 
 
 
 
-
-
+$(".reload").click(function() {
+    location.reload();
+});
 
 
 
