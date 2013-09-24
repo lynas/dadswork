@@ -22,6 +22,7 @@ function showTodaysTransaction() {
     showDebit();
     showCredit();
     showPrevBib();
+    
 
 }
 function showDebit() {
@@ -41,6 +42,8 @@ function showCredit() {
             $('.joma tr:last').after(response);
         }
     });
+    
+    
 }
 function showPrevBib() {
     // $('.previousBiboron').append($('<option>', {value: 1, text: 'My option'}), $('<option>', {value: 2, text: 'My option2'}));
@@ -58,7 +61,10 @@ function showPrevBib() {
 }
 
 
+    
 $('.addall').click(function() {
+    
+    
     var tds = document.getElementById('khoroch').getElementsByTagName('td');
     var sum = 0;
     for (var i = 0; i < tds.length; i++) {
@@ -78,6 +84,7 @@ $('.addall').click(function() {
     var x = parseFloat($(".totaljoma").html());
     var y = parseFloat($(".totalkhoroch").html());
     $('.remaining').html(x - y);
+    
 });
 
 
@@ -122,6 +129,7 @@ function showTotalBalanceSheet() {
         data: {type: "null"},
         success: function(response) {
             $('.totalbalance tr:last').after(response);
+            
         }
     });
 }
@@ -178,11 +186,15 @@ $(".reload").click(function() {
     location.reload();
 });
 
-
-
-
-
-
+$(".getbf").click(function() {
+    $.ajax({
+        url: 'php/getquery.php',
+        data: {query: "bf"},
+        success: function(response) {
+            alert(response);
+        }
+    });
+});
 
 
 

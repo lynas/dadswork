@@ -37,7 +37,9 @@
                     <div class="">
                         <img src="res/jabedakhata.JPG" />
                         <br />
-                        <img src="res/tarikh.JPG" /> <?php echo date("Y-m-d"); ?>
+                        <img src="res/tarikh.JPG" /> <span class="datest"><?php echo date("Y-m-d"); ?></span>
+                        <br />
+                        <input type="button" value="B F" class="getbf" />
                         
                     </div>
 

@@ -8,7 +8,11 @@ $result = mysql_query("SELECT description, SUM( CASE WHEN TYPE =  'joma' THEN mo
 
 
 while ($row = mysql_fetch_array($result)) {
-
-    echo "<tr><td class='desc'>".$row{'description'}."</td><td>".$row{'totals'}."</td></tr>";
+    if($row{'totals'}<0){
+        echo "<tr><td class='desc'>".$row{'description'}."</td><td></td><td>".$row{'totals'}."</td></tr>";
+    }  else {
+        echo "<tr><td class='desc'>".$row{'description'}."</td><td>".$row{'totals'}."</td><td></td></tr>";
+    }
+    
 }
 ?>

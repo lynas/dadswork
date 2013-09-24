@@ -6,8 +6,8 @@ require_once 'connectionconfig.php';
 
 
 $type =  $_REQUEST['type'];
-$debit_query = "SELECT * FROM jabeda where type='joma'";
-$credit_query = "SELECT * FROM jabeda where type='khoroch'";
+$debit_query = "SELECT * FROM jabeda where type='joma' AND date = CURDATE();";
+$credit_query = "SELECT * FROM jabeda where type='khoroch' AND date = CURDATE();";
 $query = "";
 if($type === "debit"){
     $query = $debit_query;

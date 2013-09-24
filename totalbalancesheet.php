@@ -11,12 +11,15 @@
             <!--            <a href="individual.php">Individual user Balancesheet</a><br />-->
             
             <div class ="inputform">
+                
                 <span style="text-align: center"><img src="res/balancesheet.JPG" /></span>
                 <table class="totalbalance" id="totalbalance">
                     <tbody>
                         <tr>
                             <th><img src="res/biboron.JPG" /></th>
-                            <th>Joma / Khoroch</th>
+                            
+                            <th><img src="res/joma.JPG" /> </th>
+                            <th><img src="res/khoroch.JPG" /> </th>
                         </tr>
                     </tbody>
                 </table>
