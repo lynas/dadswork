@@ -6,6 +6,29 @@ $('.save').click(function() {
     var jork = $(".jomaOrKhoroch option:selected").text();
     var taka = $(".taka").val();
     var tarik = $(".tarik").val();
+    bib = $.trim(bib.replace("'", ''));
+
+
+    if (!vn) {
+        alert("Empty Voucher No");
+        return false;
+    }
+    if (isNaN(vn)) {
+        alert("Invalid Voucher No");
+        return false;
+    }
+    if (isNaN(taka)) {
+        alert("Invalid Taka");
+        return false;
+    }
+    if (!bib) {
+        alert("Empty Biboron");
+        return false;
+    }
+    if (jork === "Select") {
+        alert("Invalid Joma / Khoroch");
+        return false;
+    }
 
 
     $.ajax({
@@ -13,37 +36,42 @@ $('.save').click(function() {
         data: {varname: "value"},
         success: function(response) {
             alert(response);
-            location.reload();
+            location.reload(true);
         }
     });
 });
 
 function showTodaysTransaction() {
-    showDebit();
-    showCredit();
+    var tarik = $(".tarik").val();
+    showDebit(tarik);
+    showCredit(tarik);
     showPrevBib();
-    
+
 
 }
-function showDebit() {
+function showDebit(expdate) {
     $.ajax({
         url: 'php/dbgeneralget.php',
-        data: {type: "credit"},
+        data: {type: "credit", edate: expdate},
         success: function(response) {
+
             $('.khoroch tr:last').after(response);
+
+
+
         }
     });
 }
-function showCredit() {
+function showCredit(expdate) {
     $.ajax({
         url: 'php/dbgeneralget.php',
-        data: {type: "debit"},
+        data: {type: "debit", edate: expdate},
         success: function(response) {
             $('.joma tr:last').after(response);
         }
     });
-    
-    
+
+
 }
 function showPrevBib() {
     // $('.previousBiboron').append($('<option>', {value: 1, text: 'My option'}), $('<option>', {value: 2, text: 'My option2'}));
@@ -61,10 +89,10 @@ function showPrevBib() {
 }
 
 
-    
+
 $('.addall').click(function() {
-    
-    
+
+
     var tds = document.getElementById('khoroch').getElementsByTagName('td');
     var sum = 0;
     for (var i = 0; i < tds.length; i++) {
@@ -84,7 +112,7 @@ $('.addall').click(function() {
     var x = parseFloat($(".totaljoma").html());
     var y = parseFloat($(".totalkhoroch").html());
     $('.remaining').html(x - y);
-    
+
 });
 
 
@@ -94,19 +122,19 @@ $(document).on('click', '.rid', function() {
     if (r === true)
     {
         $.ajax({
-        url: 'php/deleterow.php',
-        data: {deleterownum: $(this).html()},
-        success: function(response) {
-            alert(response);
-            location.reload();
-        }
-    });
+            url: 'php/deleterow.php',
+            data: {deleterownum: $(this).html()},
+            success: function(response) {
+                alert(response);
+                location.reload(true);
+            }
+        });
     }
     else
     {
-        location.reload();
+        location.reload(true);
     }
-    
+
 });
 
 
@@ -129,7 +157,7 @@ function showTotalBalanceSheet() {
         data: {type: "null"},
         success: function(response) {
             $('.totalbalance tr:last').after(response);
-            
+
         }
     });
 }
@@ -148,22 +176,19 @@ function showPrevBiboron() {
     //alert("working");
 }
 $(document).on('change', '.indiusers', function() {
-    
-    
-    
     $('#selectedUser').html(this.value);
     indishowDebit(this.value);
     indishowCredit(this.value);
 });
 
 function indishowDebit(user) {
-    
+
 
     $.ajax({
         url: 'php/getindiall.php',
         data: {type: "credit", user: user},
         success: function(response) {
-            
+
             $('.khoroch tr:last').after(response);
         }
     });
@@ -173,7 +198,7 @@ function indishowCredit(user) {
         url: 'php/getindiall.php',
         data: {type: "debit", user: user},
         success: function(response) {
-            
+
             $('.joma tr:last').after(response);
         }
     });
@@ -183,7 +208,7 @@ function indishowCredit(user) {
 
 
 $(".reload").click(function() {
-    location.reload();
+    location.reload(true);
 });
 
 $(".getbf").click(function() {
@@ -191,12 +216,22 @@ $(".getbf").click(function() {
         url: 'php/getquery.php',
         data: {query: "bf"},
         success: function(response) {
-            alert(response);
+            $("#bfsection").html(response);
+            //alert(response);
         }
     });
 });
 
 
+$(".getbf").click(function() {
+    var dd = $("#prevd").val();
+
+    showDebit(dd);
+    showCredit(dd);
+
+    //alert(dd);
+
+});
 
 
 

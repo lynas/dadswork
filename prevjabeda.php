@@ -5,29 +5,19 @@
         <title>Ledger Book</title>
         <link rel="stylesheet" href="css/style.css" type="text/css">
     </head>
-    <body onload="showPrevBiboron()">
+    <body>
         <div class="rootContainer">
-            <a href="index.php">Home</a>
-<!--            <a href="totalbalancesheet.php">Total Balancesheet</a>-->
+            <a href="index.php">Home</a><br />
             
-            <div class ="inputform">
-                <table>
-                    
-                    <tr><td></td><td><select class="indiusers" style="width: 155px;"></select><input type="button" class="reload" value="Reload" /></td></tr>
-                    
-                    
-                </table>
-
-
-
-            </div>
 
             <div class ="jabedamain">
                 <div class="jabedamainheader ">
                     <div class="">
-                        <img src="res/khotian.JPG"> :  <span id="selectedUser"></span><br />
-                        <?php echo date("Y-m-d"); ?>
-                        
+                        <img src="res/jabedakhata.JPG" />
+                        <br />
+                        <img src="res/tarikh.JPG" /> <span><input type="text" value="<?php echo date("Y-m-d"); ?>" id="prevd" /></span>
+                        <input type="button" value="B F" class="getbf" />
+                        <input type="button" class="reload" value="Reload" />
                     </div>
 
                     <div id="header"><span><img src="res/joma.JPG"></span><span style="padding-left: 350px;"><img src="res/khoroch.JPG"></span></div>
@@ -69,8 +59,8 @@
                         <tr><td></td><td><input type="button" class="addall" value="Show All" /> </td></tr>
                     </table>
                 </div>
-                
             </div>
+            
 
             
 

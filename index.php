@@ -9,6 +9,7 @@
         <div class="rootContainer">
             <a href="totalbalancesheet.php"><img src="res/balancesheet.JPG" /></a><br />
             <a href="individual.php"><img src="res/khotian.JPG" /></a><br />
+            <a href="prevjabeda.php"><img src="res/purbojabeda.JPG" /></a><br />
             <div class ="inputform">
                 <table>
                     <tr><td><img src="res/vaucharno.JPG" /></td><td><input type="text" class="vn" value="" /></td></tr>
@@ -40,6 +41,9 @@
                         <img src="res/tarikh.JPG" /> <span class="datest"><?php echo date("Y-m-d"); ?></span>
                         <br />
                         <input type="button" value="B F" class="getbf" />
+                        <span id="bfsection">
+                            
+                        </span>
                         
                     </div>
 
@@ -83,6 +87,8 @@
                     </table>
                 </div>
             </div>
+            
+           
 
             
 
