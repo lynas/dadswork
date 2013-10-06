@@ -14,7 +14,6 @@ root {
 body{
     background-color: graytext;
     background-position:center 0;
-
     font-family:solaimanLipi,arial
 }
 
@@ -34,8 +33,6 @@ body{
     width: 1000px;
     padding:20px;
     background: #eee;
-
-
 }
 
 .jabedamain{
@@ -49,14 +46,12 @@ body{
 }
 
 .jabedamainheader{
-
     background:none repeat scroll 0 0 #ECECEC;
-    margin-bottom: 18px;line-height:60px;
+    margin-bottom: 18px;
     border: 1px solid #ECECEC;
     -webkit-border-radius: 4px 4px 4px 4px;
     -moz-border-radius: 4px 4px 4px 4px;
     border-radius: 4px 4px 4px 4px
-
 }
 
 .jabedamainheader{
@@ -71,8 +66,8 @@ body{
     font-size: 100%;
 }
 
-.joma th, .totalbalance th {
-    font-size: 1.4em;
+.joma th, .totalbalance th, #customers th, .totalbalance th, .khoroch th {
+    font-size: 1em;
     text-align: center;
     padding-top: 5px;
     padding-bottom: 4px;
@@ -83,8 +78,8 @@ body{
 
 
 
-.joma td, #customers th, .totalbalance th, .totalbalance tr, .totalbalance td {
-    font-size: 1.2em;
+.joma td, .totalbalance tr, .totalbalance td{
+    font-size: 1em;
     border: 1px solid #98bf21;
     padding: 2px 2px 2px 2px;
     max-width:100px;
@@ -103,7 +98,7 @@ body{
 
 
 .khoroch th {
-    font-size: 1.4em;
+    font-size: 1em;
     text-align: left;
     padding-top: 5px;
     padding-bottom: 4px;
@@ -111,8 +106,8 @@ body{
     color: #fff;
 }
 
-.khoroch td, .khoroch th {
-    font-size: 1.2em;
+.khoroch td {
+    font-size: 1em;
     border: 1px solid #98bf21;
     padding: 3px 7px 2px 7px;
 }
@@ -127,21 +122,18 @@ body{
     height: 50px;
 }
 
-#container {
-    
+#container {    
     background-color: #ffcc33;
     margin: auto;
 }
 #first {
     width: 50%;
-    float: left;
-    
+    float: left;    
     background-color: #fff;
 }
 #second {
     width: 50%;
-    float: left;
-    
+    float: left;    
     background-color: #aaa;
 }
 #footer {
@@ -157,8 +149,7 @@ body{
     font-size: 1.4em;
     text-align: left;
     padding-top: 5px;
-    padding-bottom: 4px;
-    
+    padding-bottom: 4px;    
     color: red;
 }
 

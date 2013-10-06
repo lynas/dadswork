@@ -24,7 +24,7 @@ $result = mysql_query($query);
 
 while ($row = mysql_fetch_array($result)) {
     
-    echo "<tr><td class='rid'>".$row{'id'}."</td><td>".$row{'voucherno'}."</td><td class='desc'>".$row{'description'}."</td><td class='cv'>".$row{'money'}."</td></tr>";
+    echo "<tr><td class='rid'>".$row{'id'}."</td><td>".$row{'voucherno'}."/".$row{'date'}."</td><td class='desc'>".$row{'description'}."</td><td class='cv'>".$row{'money'}."</td></tr>";
 }
 
 

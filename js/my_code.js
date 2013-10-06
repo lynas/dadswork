@@ -169,7 +169,6 @@ function showPrevBiboron() {
         success: function(response) {
             $('.indiusers').append(response);
 
-            //alert(response);
         }
     });
 
@@ -223,13 +222,33 @@ $(".getbf").click(function() {
 });
 
 
-$(".getbf").click(function() {
-    var dd = $("#prevd").val();
-
-    showDebit(dd);
-    showCredit(dd);
-
-    //alert(dd);
+$(".showTotalJomaKhoroch").click(function() {
+    
+    var tds = document.getElementById('totalbalance').getElementsByTagName('td');
+    var sum = 0;
+    for (var i = 0; i < tds.length; i++) {
+        if (tds[i].className == 'balanceSheetTotalJomaInividualCell') {
+            sum += isNaN(tds[i].innerHTML) ? 0 : parseFloat(tds[i].innerHTML);
+        }
+    }
+    
+    
+    
+    $('.balancesheetTotalJoma').html(sum);
+    
+    var tds = document.getElementById('totalbalance').getElementsByTagName('td');
+    var sum2 = 0;
+    for (var i = 0; i < tds.length; i++) {
+        if (tds[i].className == 'balanceSheetTotalKhorochInividualCell') {
+            sum2 += isNaN(tds[i].innerHTML) ? 0 : parseFloat(tds[i].innerHTML);
+        }
+    }
+    $('.balancesheetTotalKhoroch').html(sum2);
+    
+    //var x = parseFloat($(".totaljoma").html());
+    //var y = parseFloat($(".totalkhoroch").html());
+    $('.balancesheetTotalObosisto').html(sum + sum2);
+    
 
 });
 

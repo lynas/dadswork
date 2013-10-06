@@ -23,9 +23,12 @@
                         </tr>
                     </tbody>
                 </table>
-
-
-
+                <br /><br />
+                <input type="button" class="showTotalJomaKhoroch" id="showTotalJomaKhoroch" value="Show All" />
+                <br /><br /><br />
+                Mot Joma : <span class="balancesheetTotalJoma" id="balancesheetTotalJoma" ></span><br />
+                Mot Khoroch : <span class="balancesheetTotalKhoroch" id="balancesheetTotalKhoroch" ></span><br />
+                Mot Obosisto : <span class="balancesheetTotalObosisto" id="balancesheetTotalObosisto" ></span><br /><br />
             </div>
 
             
