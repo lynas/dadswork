@@ -12,7 +12,7 @@ $selected = mysql_select_db("ledgerbook", $dbhandle) or die("Could not select ex
 */
 
 
-mysql_query("INSERT INTO jabeda VALUES (NULL, '".$_REQUEST['vn']."', '".$_REQUEST['bib']."', '".$_REQUEST['jork']."', '".$_REQUEST['taka']."', '".$_REQUEST['tarik']."');");
+mysql_query("INSERT INTO jabeda VALUES (NULL, '".$_REQUEST['vn']."', '".$_REQUEST['bib']."', '".$_REQUEST['biboron']."', '".$_REQUEST['jork']."', '".$_REQUEST['taka']."', '".$_REQUEST['tarik']."');");
 
 
 /*

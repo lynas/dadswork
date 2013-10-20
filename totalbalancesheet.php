@@ -16,8 +16,7 @@
                 <table class="totalbalance" id="totalbalance">
                     <tbody>
                         <tr>
-                            <th><img src="res/biboron.JPG" /></th>
-                            
+                            <th>NAME</th>
                             <th><img src="res/joma.JPG" /> </th>
                             <th><img src="res/khoroch.JPG" /> </th>
                         </tr>

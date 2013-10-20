@@ -3,10 +3,19 @@ $('.save').click(function() {
 
     var vn = $(".vn").val();
     var bib = $(".bib").val();
-    var jork = $(".jomaOrKhoroch option:selected").text();
+    var biboron = $(".biboron").val();
+    var jork = "";
     var taka = $(".taka").val();
     var tarik = $(".tarik").val();
     bib = $.trim(bib.replace("'", ''));
+
+    if (document.getElementById('jomaRadio').checked) {
+        jork = "Joma";
+    } else if (document.getElementById('khorochRadio').checked) {
+        jork = "Khoroch";
+    }
+
+
 
 
     if (!vn) {
@@ -22,23 +31,30 @@ $('.save').click(function() {
         return false;
     }
     if (!bib) {
+        alert("Empty Name");
+        return false;
+    }
+    if (!biboron) {
         alert("Empty Biboron");
         return false;
     }
-    if (jork === "Select") {
-        alert("Invalid Joma / Khoroch");
+    if (!jork) {
+        alert("Select Joma / Khoroch");
         return false;
     }
 
 
+
     $.ajax({
-        url: 'php/dbinsertnew.php?vn=' + vn + '&bib=' + bib + '&jork=' + jork + '&taka=' + taka + '&tarik=' + tarik,
+        url: 'php/dbinsertnew.php?vn=' + vn + '&bib=' + bib + '&biboron=' + biboron + '&jork=' + jork + '&taka=' + taka + '&tarik=' + tarik,
         data: {varname: "value"},
         success: function(response) {
             alert(response);
             location.reload(true);
         }
     });
+
+
 });
 
 function showTodaysTransaction() {
@@ -88,16 +104,22 @@ function showPrevBib() {
     //alert("working");
 }
 
-
+function trimcoma(original){
+    var str1 = original;
+    str1.replace(/\,/g, "");
+    var str2 = str1.replace(/\,/g, "");
+    
+    return str2;
+    
+}
 
 $('.addall').click(function() {
-
-
+    
     var tds = document.getElementById('khoroch').getElementsByTagName('td');
     var sum = 0;
     for (var i = 0; i < tds.length; i++) {
         if (tds[i].className == 'cv') {
-            sum += isNaN(tds[i].innerHTML) ? 0 : parseFloat(tds[i].innerHTML);
+            sum += isNaN(trimcoma(tds[i].innerHTML)) ? 0 : parseFloat(trimcoma(tds[i].innerHTML));
         }
     }
     $('.totalkhoroch').html(sum);
@@ -105,7 +127,7 @@ $('.addall').click(function() {
     var sum2 = 0;
     for (var i = 0; i < tds.length; i++) {
         if (tds[i].className == 'cv') {
-            sum2 += isNaN(tds[i].innerHTML) ? 0 : parseFloat(tds[i].innerHTML);
+            sum2 += isNaN(trimcoma(tds[i].innerHTML)) ? 0 : parseFloat(trimcoma(tds[i].innerHTML));
         }
     }
     $('.totaljoma').html(sum2);
@@ -223,32 +245,29 @@ $(".getbf").click(function() {
 
 
 $(".showTotalJomaKhoroch").click(function() {
-    
+
     var tds = document.getElementById('totalbalance').getElementsByTagName('td');
     var sum = 0;
     for (var i = 0; i < tds.length; i++) {
         if (tds[i].className == 'balanceSheetTotalJomaInividualCell') {
-            sum += isNaN(tds[i].innerHTML) ? 0 : parseFloat(tds[i].innerHTML);
+            sum += isNaN(trimcoma( tds[i].innerHTML)) ? 0 : parseFloat(trimcoma( tds[i].innerHTML));
         }
     }
-    
-    
-    
+
+
+
     $('.balancesheetTotalJoma').html(sum);
-    
+
     var tds = document.getElementById('totalbalance').getElementsByTagName('td');
     var sum2 = 0;
     for (var i = 0; i < tds.length; i++) {
         if (tds[i].className == 'balanceSheetTotalKhorochInividualCell') {
-            sum2 += isNaN(tds[i].innerHTML) ? 0 : parseFloat(tds[i].innerHTML);
+            sum2 += isNaN(trimcoma(tds[i].innerHTML)) ? 0 : parseFloat(trimcoma(tds[i].innerHTML));
         }
     }
     $('.balancesheetTotalKhoroch').html(sum2);
-    
-    //var x = parseFloat($(".totaljoma").html());
-    //var y = parseFloat($(".totalkhoroch").html());
     $('.balancesheetTotalObosisto').html(sum + sum2);
-    
+
 
 });
 
@@ -258,7 +277,13 @@ $(".showTotalJomaKhoroch").click(function() {
 
 
 
+$(".getpreviousjabeda").click(function() {
+    var dd = $("#prevd").val();
 
+    showDebit(dd);
+    showCredit(dd);
+
+});
 
 
 

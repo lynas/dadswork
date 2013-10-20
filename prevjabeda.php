@@ -16,7 +16,7 @@
                         <img src="res/jabedakhata.JPG" />
                         <br />
                         <img src="res/tarikh.JPG" /> <span><input type="text" value="<?php echo date("Y-m-d"); ?>" id="prevd" /></span>
-                        <input type="button" value="B F" class="getbf" />
+                        <input type="button" value="SHOW" class="getpreviousjabeda" />
                         <input type="button" class="reload" value="Reload" />
                     </div>
 

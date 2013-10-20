@@ -23,8 +23,12 @@ $result = mysql_query($query);
 
 
 while ($row = mysql_fetch_array($result)) {
-    
-    echo "<tr><td class='rid'>".$row{'id'}."</td><td>".$row{'voucherno'}."/".$row{'date'}."</td><td class='desc'>".$row{'description'}."</td><td class='cv'>".$row{'money'}."</td></tr>";
+    if (strpos($row{'money'}, '.') > 0) {
+        $customMoney = custom_format($row{'money'}, 3);
+    } else {
+        $customMoney = custom_format($row{'money'});
+    }
+    echo "<tr><td class='rid'>".$row{'id'}."</td><td>".$row{'voucherno'}."/".$row{'date'}."</td><td class='desc'>".$row{'biboron'}."</td><td class='cv'>".$customMoney."</td></tr>";
 }
 
 
