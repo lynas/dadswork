@@ -26,6 +26,10 @@ $('.save').click(function() {
         alert("Invalid Voucher No");
         return false;
     }
+    if (!taka) {
+        alert("Invalid Taka");
+        return false;
+    }
     if (isNaN(taka)) {
         alert("Invalid Taka");
         return false;

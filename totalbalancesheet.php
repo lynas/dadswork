@@ -7,16 +7,16 @@
     </head>
     <body onload="showTotalBalanceSheet()">
         <div class="rootContainer">
-            <a href="index.php">Home</a><br />
+            <a href="index.php"><img src="res/jabedakhata.JPG" /></a><br />
             <!--            <a href="individual.php">Individual user Balancesheet</a><br />-->
-            
+            <div class="jabedamainheader "><img src="res/balancesheet.JPG" /></div>
             <div class ="inputform">
                 
-                <span style="text-align: center"><img src="res/balancesheet.JPG" /></span>
+                
                 <table class="totalbalance" id="totalbalance">
                     <tbody>
                         <tr>
-                            <th>NAME</th>
+                            <th><img src="res/nam.JPG" /></th>
                             <th><img src="res/joma.JPG" /> </th>
                             <th><img src="res/khoroch.JPG" /> </th>
                         </tr>
@@ -25,9 +25,9 @@
                 <br /><br />
                 <input type="button" class="showTotalJomaKhoroch" id="showTotalJomaKhoroch" value="Show All" />
                 <br /><br /><br />
-                Mot Joma : <span class="balancesheetTotalJoma" id="balancesheetTotalJoma" ></span><br />
-                Mot Khoroch : <span class="balancesheetTotalKhoroch" id="balancesheetTotalKhoroch" ></span><br />
-                Mot Obosisto : <span class="balancesheetTotalObosisto" id="balancesheetTotalObosisto" ></span><br /><br />
+                <img src="res/motjoma.JPG" /> : <span class="balancesheetTotalJoma" id="balancesheetTotalJoma" ></span><br />
+                <img src="res/motkhoroch.JPG" /> : <span class="balancesheetTotalKhoroch" id="balancesheetTotalKhoroch" ></span><br />
+                <img src="res/obosisto.JPG" /> : <span class="balancesheetTotalObosisto" id="balancesheetTotalObosisto" ></span><br /><br />
             </div>
 
             

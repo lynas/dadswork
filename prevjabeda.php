@@ -7,7 +7,7 @@
     </head>
     <body>
         <div class="rootContainer">
-            <a href="index.php">Home</a><br />
+            <a href="index.php"><img src="res/jabedakhata.JPG" /></a><br />
             
 
             <div class ="jabedamain">

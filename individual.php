@@ -7,7 +7,7 @@
     </head>
     <body onload="showPrevBiboron()">
         <div class="rootContainer">
-            <a href="index.php">Home</a>
+            <a href="index.php"><img src="res/jabedakhata.JPG" /></a>
 <!--            <a href="totalbalancesheet.php">Total Balancesheet</a>-->
             
             <div class ="inputform">

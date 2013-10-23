@@ -7,10 +7,13 @@
     </head>
     <body onload="showTodaysTransaction()">
         <div class="rootContainer">
-            <a href="totalbalancesheet.php"><img src="res/balancesheet.JPG" /></a><br />
-            <a href="individual.php"><img src="res/khotian.JPG" /></a><br />
-            <a href="prevjabeda.php"><img src="res/purbojabeda.JPG" /></a><br />
+<span style="float: left"> 
+                    <a href="totalbalancesheet.php"><img src="res/balancesheet.JPG" /></a><br />
+                    <a href="individual.php"><img src="res/khotian.JPG" /></a><br />
+                    <a href="prevjabeda.php"><img src="res/purbojabeda.JPG" /></a><br />
+                </span>
             <div class ="inputform">
+                
                 <table>
                     <tr><td><img src="res/vaucharno.JPG" /></td><td><input type="text" class="vn" value="" /></td></tr>
                     <tr><td></td><td><select class="previousBiboron" style="width: 155px;"></select></td></tr>
@@ -19,8 +22,8 @@
                     <tr><td><img src="res/jomaorkhoroch.JPG" /></td>
                         <td>
                             <form>
-                                <input type="radio" id="jomaRadio" name="sex" value="Joma">Joma 
-                                <input type="radio" id="khorochRadio" name="sex" value="Khoroch">Khoroch
+                                <input type="radio" id="jomaRadio" name="sex" value="Joma"><img src="res/joma.JPG"> 
+                                <input type="radio" id="khorochRadio" name="sex" value="Khoroch"><img src="res/khoroch.JPG">
                             </form>
                         </td>
                     </tr>

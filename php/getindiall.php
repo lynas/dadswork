@@ -28,7 +28,7 @@ while ($row = mysql_fetch_array($result)) {
     } else {
         $customMoney = custom_format($row{'money'});
     }
-    echo "<tr><td class='rid'>".$row{'id'}."</td><td>".$row{'voucherno'}."/".$row{'date'}."</td><td class='desc'>".$row{'biboron'}."</td><td class='cv'>".$customMoney."</td></tr>";
+    echo "<tr><td class='rid'>".$row{'id'}."</td><td><span class='voucherno'>".$row{'voucherno'}."</span>/".$row{'date'}."</td><td class='desc'>".$row{'biboron'}."</td><td class='cv'>".$customMoney."</td></tr>";
 }
 
 
