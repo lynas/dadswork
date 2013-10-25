@@ -9,6 +9,7 @@ $result = mysql_query("SELECT description, SUM( CASE WHEN TYPE =  'joma' THEN mo
 
 while ($row = mysql_fetch_array($result)) {
     if ($row{'totals'} < 0) {
+        $row{'totals'} = $row{'totals'} * (-1);
         if (strpos($row{'totals'}, '.') > 0) {
             $customMoney = custom_format($row{'totals'}, 3);
         } else {

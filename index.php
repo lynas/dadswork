@@ -27,7 +27,13 @@
                             </form>
                         </td>
                     </tr>
-                    <tr><td><img src="res/taka.JPG" /></td><td><input type="text" class="taka" value="" /></td></tr>
+                    <tr>
+                        <td>
+                            <img src="res/taka.JPG" /></td><td><input type="text" class="taka" value="" />
+                            <input type="button" id="formatedTaka" value="FM" />
+                            <span id="formatedTakaOutput"></span>
+                        </td>
+                    </tr>
                     <tr><td><img src="res/tarikh.JPG" /></td><td><input type="text" class="tarik" value="<?php echo date("Y-m-d"); ?>" /></td></tr>
                     <tr><td></td><td><input type="button" class="save" id="save" value="Save"/></td></tr>
 

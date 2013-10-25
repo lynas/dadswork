@@ -108,17 +108,17 @@ function showPrevBib() {
     //alert("working");
 }
 
-function trimcoma(original){
+function trimcoma(original) {
     var str1 = original;
     str1.replace(/\,/g, "");
     var str2 = str1.replace(/\,/g, "");
-    
+
     return str2;
-    
+
 }
 
 $('.addall').click(function() {
-    
+
     var tds = document.getElementById('khoroch').getElementsByTagName('td');
     var sum = 0;
     for (var i = 0; i < tds.length; i++) {
@@ -254,7 +254,7 @@ $(".showTotalJomaKhoroch").click(function() {
     var sum = 0;
     for (var i = 0; i < tds.length; i++) {
         if (tds[i].className == 'balanceSheetTotalJomaInividualCell') {
-            sum += isNaN(trimcoma( tds[i].innerHTML)) ? 0 : parseFloat(trimcoma( tds[i].innerHTML));
+            sum += isNaN(trimcoma(tds[i].innerHTML)) ? 0 : parseFloat(trimcoma(tds[i].innerHTML));
         }
     }
 
@@ -270,7 +270,7 @@ $(".showTotalJomaKhoroch").click(function() {
         }
     }
     $('.balancesheetTotalKhoroch').html(sum2);
-    $('.balancesheetTotalObosisto').html(sum + sum2);
+    $('.balancesheetTotalObosisto').html(sum - sum2);
 
 
 });
@@ -292,3 +292,27 @@ $(".getpreviousjabeda").click(function() {
 
 
 
+$('#formatedTaka').click(function() {
+    var taka = $(".taka").val();
+     if (!taka) {
+        alert("Invalid Taka");
+        return false;
+    }
+    if (isNaN(taka)) {
+        alert("Invalid Taka");
+        return false;
+    }
+
+    //alert($(".taka").val());
+    $.ajax({
+        url: 'php/generalFunctions.php',
+        data: {callid: "formatTaka", myTaka:$(".taka").val()},
+        success: function(response) {
+            //$("#bfsection").html(response);
+            $('#formatedTakaOutput').html(response);
+        }
+    });
+
+
+
+});
