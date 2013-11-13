@@ -23,8 +23,9 @@ body{
     -webkit-border-radius:6px 6px 6px 6px;
     -moz-border-radius:6px 6px 6px 6px;
     border-radius:6px 6px 6px 6px;
-    width: 500px;
+    width: 785px;
     margin: 0 auto; 
+    padding-left: 167px;
 }
 
 .inputform .blheader{
@@ -41,7 +42,7 @@ body{
 }
 
 .jabedamain{
-    padding:20px;
+    padding:4px;
     background: #ddd;
     -webkit-border-radius:6px 6px 6px 6px;
     -moz-border-radius:6px 6px 6px 6px;
@@ -53,7 +54,7 @@ body{
 .jabedamainheader{
     text-align: center;
     background:none repeat scroll 0 0 #ECECEC;
-    margin-bottom: 18px;
+    margin-bottom: 5px;
     border: 1px solid #ECECEC;
     -webkit-border-radius: 4px 4px 4px 4px;
     -moz-border-radius: 4px 4px 4px 4px;
@@ -123,8 +124,8 @@ body{
 
 #header {
     width: 100%;
-    background-color: red;
-    height: 50px;
+    
+    height: 5px;
 }
 
 #container {    
@@ -147,7 +148,7 @@ body{
     
 }
 #footer td{
-    padding: 20px;
+    padding: 2px;
 }
 
 #selectedUser{
@@ -165,4 +166,19 @@ body{
     padding-bottom: 4px;
     padding-left: 20px;
     color: green;
+}
+
+.blankSpace{
+    color: white;
+}
+
+.cv{
+    text-align: right;
+}
+
+.balanceSheetTotalJomaInividualCell{
+    text-align: right;
+}
+.balanceSheetTotalKhorochInividualCell{
+    text-align: right;
 }

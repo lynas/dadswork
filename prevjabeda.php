@@ -13,20 +13,19 @@
             <div class ="jabedamain">
                 <div class="jabedamainheader ">
                     <div class="">
-                        <img src="res/jabedakhata.JPG" />
-                        <br />
+                        <span style="float: right"><img src="res/jabedakhata.JPG" /></span>
                         <img src="res/tarikh.JPG" /> <span><input type="text" value="<?php echo date("Y-m-d"); ?>" id="prevd" /></span>
                         <input type="button" value="SHOW" class="getpreviousjabeda" />
                         <input type="button" class="reload" value="Reload" />
                     </div>
 
-                    <div id="header"><span><img src="res/joma.JPG"></span><span style="padding-left: 350px;"><img src="res/khoroch.JPG"></span></div>
+                    <div id="header"></div>
                     <div id="container">
                         <div id="first">
                             <table class="joma" id="joma">
                                 <tbody>
                                     <tr>
-                                        <th>Id</th>
+                                        <th><img src="res/joma.JPG"></th>
                                         <th>V No</th>
                                         <th>Biboron</th>
                                         <th>Taka</th>
@@ -38,7 +37,7 @@
                             <table class="khoroch" id="khoroch">
                                 <tbody>
                                     <tr>
-                                        <th>Id</th>
+                                        <th><img src="res/khoroch.JPG"></th>
                                         <th>V No</th>
                                         <th>Biboron</th>
                                         <th>Taka</th>
@@ -56,7 +55,7 @@
                         <tr><td><img src="res/motjoma.JPG" /></td><td class="totaljoma"></td></tr>
                         <tr><td><img src="res/motkhoroch.JPG" /></td><td class="totalkhoroch"></td></tr>
                         <tr><td><img src="res/obosisto.JPG" /></td><td class="remaining"></td></tr>
-                        <tr><td></td><td><input type="button" class="addall" value="Show All" /> </td></tr>
+                        <tr><td><input type="button" class="addall" value="Show All" /></td><td> </td></tr>
                     </table>
                 </div>
             </div>

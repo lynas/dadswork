@@ -7,7 +7,7 @@
     </head>
     <body onload="showTotalBalanceSheet()">
         <div class="rootContainer">
-            <a href="index.php"><img src="res/jabedakhata.JPG" /></a><br />
+            <span style="float: left;background-color: #A7C942; padding: 10px;"><a href="index.php"><img src="res/jabedakhata.JPG" /></a></span>
             <!--            <a href="individual.php">Individual user Balancesheet</a><br />-->
             <div class="jabedamainheader "><img src="res/balancesheet.JPG" /></div>
             <div class ="inputform">
@@ -23,11 +23,11 @@
                     </tbody>
                 </table>
                 <br /><br />
-                <input type="button" class="showTotalJomaKhoroch" id="showTotalJomaKhoroch" value="Show All" />
-                <br /><br /><br />
+                
                 <img src="res/motjoma.JPG" /> : <span class="balancesheetTotalJoma" id="balancesheetTotalJoma" ></span><br />
                 <img src="res/motkhoroch.JPG" /> : <span class="balancesheetTotalKhoroch" id="balancesheetTotalKhoroch" ></span><br />
-                <img src="res/obosisto.JPG" /> : <span class="balancesheetTotalObosisto" id="balancesheetTotalObosisto" ></span><br /><br />
+                <img src="res/obosisto.JPG" /> : <span class="balancesheetTotalObosisto" id="balancesheetTotalObosisto" ></span><br />
+                <input type="button" class="showTotalJomaKhoroch" id="showTotalJomaKhoroch" value="Show All" />
             </div>
 
             
